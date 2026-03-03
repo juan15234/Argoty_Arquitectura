@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(177, 169, 159);
+}
+
+.volver{
+    position: fixed;
+    padding: 10px;
+    outline: none;
+    border: none;
+    z-index: 2;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #f5deb3;
+}
+
+.volver:hover{
+    cursor: pointer;
+    background-color: #807665;
+    color: wheat;
+}
+
+.mas-imagenes{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(177, 169, 159);
+}
+
+.mas-imagenes .barra-superior{
+    position: relative;
+    width: 100%;
+    background-color: rgb(177, 169, 159);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mas-imagenes .barra-superior h1{
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    font-family: 'Cinzel';
+    font-weight: normal;
+    border-radius: 50px;
+}
+
+.mas-imagenes .imagenes{
+    position: relative;
+    width: 80%;
+    height: 20%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.mas-imagenes .imagenes img{
+    position: relative;
+    width: 750px;
+    height: 400px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (min-width:1008px) and (max-width: 1700px) {
+    .proyecto .barra-superior h1{
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+    }
+
+    .mas-imagenes .barra-superior h1{
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+    }
+
+    .mas-imagenes .imagenes img{
+        position: relative;
+        width: 95%;
+        height: 300px;
+        align-self: center;
+    }
+
+    .proyecto .proyecto-info p{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1008px) {
+
+    .proyecto .barra-superior h1{
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+    }
+
+    .proyecto .proyecto-info{
+        width: 100%;
+        grid-template-columns: 1.5fr 1.5fr;
+    }
+
+    .proyecto .proyecto-info img{
+        height: 50%;
+    }
+
+    .proyecto .proyecto-info .imagenes-proyecto .imagenes-izquierda img{
+        height: 40%;
+        width: 90%;
+    }
+
+    .proyecto .proyecto-info p{
+        font-size: 20px;
+    }
+    
+    .mas-imagenes .barra-superior h1{
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+    }
+
+    .mas-imagenes .imagenes img{
+        position: relative;
+        width: 90%;
+        height: 270px;
+    }
+
+    .mas-imagenes .imagenes{
+        position: relative;
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+    .proyecto .barra-superior h1{
+        padding: 5px 20px 5px 20px;
+        font-size: 15px;
+    }
+
+    .proyecto .proyecto-info{
+        width: 100%;
+        grid-template-rows: 1.5fr 1.5fr;
+        grid-template-columns: none;
+    }
+
+    .proyecto .proyecto-info img{
+        height: 80%;
+    }
+
+    .proyecto .proyecto-info .imagenes-proyecto .imagenes-izquierda img{
+        height: 50%;
+        width: 90%;
+    }
+
+    .proyecto .proyecto-info p{
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .mas-imagenes .barra-superior h1{
+        padding: 5px 20px 5px 20px;
+        font-size: 15px;
+    }
+
+    .mas-imagenes .imagenes img{
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    .mas-imagenes .imagenes{
+        width: 90%;
+    }
+}

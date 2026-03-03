@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="daniel-cordoba-style.css">
+</head>
+<body>
+
+    <button class="volver" id="boton-volver" onclick="volver()"></button>
+
+    <section class="proyecto">
+        <div class="barra-superior"> <h1>DANIEL CORDOBA</h1></div>
+        <div class="proyecto-info">
+            <div class="imagenes-proyecto">
+                <div class="imagenes-izquierda">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/principal-1.jpg" alt="">
+                </div>
+                <div class="imagen-derecha">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/principal-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="texto">
+                <strong>Este proyecto consistió en el diseño y
+remodelación de un consultorio de estética
+dental moderno, funcional y con enfoque en
+el lujo.</strong>
+
+            <p>Ubicado en el Pacific Mall de Cali, este espacio
+fue concebido para elevar la imagen del
+profesional y ofrecer una experiencia superior al
+paciente. Los acabados de alta gama, la
+iluminación estratégica y la distribución
+precisa, hacen de este consultorio un entorno
+cómodo, eficiente y visualmente impactante.</p>
+
+            <p>El concepto combina elegancia, tecnología y
+limpieza visual, transmitiendo sofisticación y
+confianza desde la recepción hasta cada zona
+operativa. Cada detalle fue pensado para
+reflejar una evolución estética y profesional,
+alineada con las exigencias del sector salud de
+alta gama.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mas-imagenes">
+        <div class="barra-superior"> <h1>MÁS IMAGENES</h1></div>
+        <div class="imagenes">
+            <div class="group">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-1.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-2.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-3.jpeg" alt="">
+            </div>
+        
+            <div class="group">
+                
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-4.jpeg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-5.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/daniel-cordoba/imagen-6.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function volver(){
+            window.history.back();
+        }
+
+        const boton_volver = document.getElementById('boton-volver')
+
+        if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+
+        window.addEventListener('resize', ()=>{
+            
+            if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+        })
+    </script>
+
+</body>
+</html>
