@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Consultorio-WIZZ-style.css">
+</head>
+<body>
+
+    <button class="volver" id="boton-volver" onclick="volver()"></button>
+
+    <section class="proyecto">
+        <div class="barra-superior"> <h1>CONSULTORIO WIZZ</h1></div>
+        <div class="proyecto-info">
+            <div class="imagenes-proyecto">
+                <div class="imagenes-izquierda">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/principal-1.jpg" alt="">
+                </div>
+                <div class="imagen-derecha">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/principal-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="texto">
+                <strong>Un rediseño funcional que conserva la
+esencia de marca y mejora la experiencia
+desde la entrada.</strong>
+
+            <p>La intervención en el consultorio odontológico
+WIZZ se centró en rediseñar la zona de
+recepción y sala de espera, buscando una
+distribución más eficiente sin perder la
+identidad visual de la marca.</p>
+
+            <p>El resultado fue un espacio que transmite
+amplitud y calidez, con una ambientación
+pensada para generar una experiencia más
+acogedora y profesional desde el primer
+contacto.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mas-imagenes">
+        <div class="barra-superior"> <h1>MÁS IMAGENES</h1></div>
+        <div class="imagenes">
+            <div class="group">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/principal-1.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/principal-2.jpg" alt="">
+            </div>
+        
+            <div class="group">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/imagen-1.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/Consultorio-WIZZ/imagen-2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function volver(){
+            window.history.back();
+        }
+
+        const boton_volver = document.getElementById('boton-volver')
+
+        if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+
+        window.addEventListener('resize', ()=>{
+            
+            if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+        })
+    </script>
+
+</body>
+</html>

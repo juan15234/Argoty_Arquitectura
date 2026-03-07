@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="edificio-ingenio-style.css">
+</head>
+<body>
+
+    <button class="volver" id="boton-volver" onclick="volver()"></button>
+
+    <section class="proyecto">
+        <div class="barra-superior"> <h1>EDIFICIO EL INGENIO</h1></div>
+        <div class="proyecto-info">
+            <div class="imagenes-proyecto">
+                <div class="imagenes-izquierda">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/principal-1.jpg" alt="">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/principal-2.jpg" alt="">
+                </div>
+                <div class="imagen-derecha">
+                    <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/principal-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="texto">
+                <strong>Este edificio residencial en el barrio El Ingenio fue diseñado para transformar un lote urbano en una oportunidad multifamiliar rentable y funcional. Se crearon cuatro apartaestudios por piso, cuidadosamente distribuidos para brindar comodidad, iluminación y privacidad.</strong>
+
+            <p>En el último nivel se proyectó un penthouse de doble altura, pensado como un espacio exclusivo que combina amplitud, elegancia y una experiencia habitacional única.</p>
+
+            <p>El propósito del proyecto fue claro: maximizar el retorno sobre la inversión del cliente, proponiendo un diseño inteligente, moderno y eficiente que genera alto valor y oportunidades de renta constante.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mas-imagenes">
+        <div class="barra-superior"> <h1>MÁS IMAGENES</h1></div>
+        <div class="imagenes">
+            <div class="group">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-1.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-2.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-3.jpg" alt="">
+            </div>
+        
+            <div class="group">
+                
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-4.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-5.jpg" alt="">
+                <img src="../../imagenes/Imagenes para pagina/Proyectos comerciales/edificio-ingenio/imagen-6.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function volver(){
+            window.history.back();
+        }
+
+        const boton_volver = document.getElementById('boton-volver')
+
+        if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+
+        window.addEventListener('resize', ()=>{
+            
+            if(innerWidth < 767){
+            
+
+                boton_volver.textContent = '⬅️'
+            }else{
+                boton_volver.textContent = '⬅️INICIO'
+            }
+        })
+    </script>
+
+</body>
+</html>
