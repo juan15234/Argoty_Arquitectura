@@ -8,30 +8,27 @@ html,body{
 }
 
 h1{
-    font-size: 30px;
     font-family: "Cinzel";
     font-weight: normal;
     text-align: center;
-    color: white;
 }
 
 h2{
-    font-size: 40px;
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     text-align: center;
-    color: rgb(214, 214, 214);
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-align: center;
 }
 
 h4{
-    font-size: 25px;
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    color: rgb(207, 162, 15);
-    z-index: 2;
 }
 
 a{
@@ -59,6 +56,24 @@ nav{
 
 .empresa_logo h1,h2{
     margin: 0px;
+}
+
+.empresa_logo h1{
+    font-size: 15px;
+    color: white;
+}
+
+.empresa_logo h2{
+    font-size: 15px;
+    color: rgb(214, 214, 214);
+}
+
+.container_titulos h4{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: rgb(207, 162, 15);
+    z-index: 2;
 }
 
 .navegacion{
@@ -158,8 +173,7 @@ nav{
 .section-principal .container{
     position: relative;
     display: flex;
-    background-color: rgb(158, 124, 11, 0.6);
-    width: 50%;
+    width: 100%;
     margin: 30px 0;
     overflow: hidden;
     gap: 20px;
@@ -169,7 +183,7 @@ nav{
 .section-principal .track{
     position: relative;
     display: flex;
-    width: auto;
+    width: max-content;
     gap: 20px;
     animation: spin 25s linear infinite;
     z-index: 2;
@@ -180,17 +194,78 @@ nav{
     object-fit: contain;
     width: 100px;
     height: 100px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 25%;
 }
 
 @keyframes spin {
-    from{transform: translateX(100%);}
-    to{transform: translateX(-200%);}
+    from{transform: translateX(0%);}
+    to{transform: translateX(-50%);}
 }
 
 .separador-gold{
-    background-color: rgb(207, 163, 19);
+    background-color: rgb(197, 155, 18);
     width: 100%;
     height: 5vh;
+}
+
+/*SECTION EQUIPO*/
+.section-equipo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 95vh;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.titulos-equipo{
+    margin: 20px 0;
+    background-color: white;
+    padding: 20px;
+}
+
+.titulos-equipo h2,h3,h4{
+    background-color: transparent;
+    color: black;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.galeria_equipo{
+    display: flex;
+    width: 95%;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid rgb(207, 162, 15);
+    border-radius: 20px;
+}
+
+.galeria_equipo button{
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    left: 5px;
+    margin: 5px;
+}
+
+.galeria_equipo button:last-of-type{
+    left: auto;
+    right: 5px;
+}
+
+.galeria_equipo button svg{
+    width: 20px;
+    height: 20px;
 }
