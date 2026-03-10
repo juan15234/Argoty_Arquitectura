@@ -19,17 +19,32 @@ btn_imagen_siguiente.addEventListener("click", () => {
 });
 
 const galeria_proyectos = document.querySelectorAll(".galeria_proyectos");
+const card_servicio = document.querySelectorAll(".card-servicio")
+const span_proyectos = document.querySelectorAll(".card_face span")
+const card_face = document.querySelectorAll(".card_face")
+const card_back = document.querySelectorAll(".card_back")
+let index_proyecto = 1
 
 function cambiar_imagen() {
   galeria_proyectos.forEach((galeria) => {
     
-    if (galeria.scrollLeft + galeria.clientWidth >= galeria.scrollWidth) {
+    if (index_proyecto == 4) {
       galeria.scrollLeft = 0;
+      index_proyecto = 1;
     } else {
       galeria.scrollLeft += galeria.clientWidth;
+      index_proyecto += 1;
     }
   });
 }
+
+span_proyectos.forEach((span, index) => {
+  span.addEventListener("click", () => {
+    
+      card_servicio[index].classList.toggle("flip")
+      clearInterval(intervalo)
+    })
+})
 
 const titulos_card_proyectos = document.querySelectorAll(".titulos_card")
 let intervalo = setInterval(cambiar_imagen, 4000);
