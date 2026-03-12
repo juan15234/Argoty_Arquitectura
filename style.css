@@ -34,7 +34,7 @@ h4 {
   font-weight: 500;
 }
 
-a {
+a,li {
   position: relative;
   text-decoration: none;
   color: white;
@@ -523,6 +523,79 @@ span:hover ~ .span_hover {
   border: 1px solid rgb(253, 215, 91);
 }
 
+/*SECTION CONTACTO*/
+.section-contacto{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+  gap: 30px;
+}
+
+.contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 30px;
+  gap: 20px;
+}
+
+.contacto h2{
+  color: white;
+  font-size: 35px;
+}
+
+.contacto .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.contacto .info ul{
+  list-style: none;
+  padding: 0;
+}
+
+.contacto .info li{
+  font-size: 15px;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.contacto .info li strong{
+  color: rgb(253, 215, 91);
+}
+
+.contacto .info button{
+  padding: 20px;
+  border-radius: 50px;
+  outline: none;
+  border: 2px solid rgb(253, 215, 91);
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.contacto .info button:hover{
+  cursor: pointer;
+  background-color: rgb(253, 215, 91);
+  color: white;
+}
+
+.contacto img{
+  border-radius: 30px;
+  border: 1px solid rgb(253, 215, 91);
+  width: 90%;
+  height: 500px;
+}
+
 @media (min-width: 600px) {
   .empresa_logo h1 {
     font-size: 20px;
@@ -551,6 +624,15 @@ span:hover ~ .span_hover {
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid rgb(253, 215, 91);
+  }
+
+  .contacto{
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .contacto h2{
+    font-size: 50px;
   }
 }
 
@@ -597,5 +679,15 @@ span:hover ~ .span_hover {
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid rgb(253, 215, 91);
+  }
+
+  .contacto img{
+    width: 90%;
+    height: 600px;
+  }
+  
+  .contacto h2{
+    font-size: 80px;
+    width: 90%;
   }
 }
