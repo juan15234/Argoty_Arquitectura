@@ -103,7 +103,8 @@ span_proyectos_face.forEach((span, index) => {
       } else if (index_proyecto == 4) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/remodelacion/daniel-cordoba/principal-2.JPG";
-        titulo_proyectos_back[index].textContent = " Consultorio Daniel Cordoba";
+        titulo_proyectos_back[index].textContent =
+          " Consultorio Daniel Cordoba";
         texto_proyecto[index].textContent = "asdasd";
       } else if (index_proyecto == 5) {
         card_back[index].style.backgroundImage =
@@ -121,8 +122,7 @@ span_proyectos_face.forEach((span, index) => {
       if (index_proyecto == 1) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/diseño_arquitectonico/Casa DELONIX/Scene 5.png";
-        titulo_proyectos_back[index].textContent =
-          "Casa DELONIX";
+        titulo_proyectos_back[index].textContent = "Casa DELONIX";
         texto_proyecto[index].textContent = "";
       } else if (index_proyecto == 2) {
         card_back[index].style.backgroundImage =
@@ -144,17 +144,17 @@ span_proyectos_face.forEach((span, index) => {
           "url('imagenes/servicios_imagenes/diseño_arquitectonico/Casa-L20/imagen-1.jpg";
         titulo_proyectos_back[index].textContent = "Casa L20";
         texto_proyecto[index].textContent = "asdasd";
-      }else if (index_proyecto == 6) {
+      } else if (index_proyecto == 6) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/diseño_arquitectonico/Casa-O19/imagen-3.jpg";
         titulo_proyectos_back[index].textContent = "Casa O19";
         texto_proyecto[index].textContent = "asdasd";
-      }else if (index_proyecto == 7) {
+      } else if (index_proyecto == 7) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/diseño_arquitectonico/Edificio-Juanambu-NOUVAVITA/principal-2.jpg";
         titulo_proyectos_back[index].textContent = "Edificio NOUVAVITA";
         texto_proyecto[index].textContent = "asdasd";
-      }else if (index_proyecto == 8) {
+      } else if (index_proyecto == 8) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/diseño_arquitectonico/sara-zapata/imagen-1.jpeg";
         titulo_proyectos_back[index].textContent = "Consultorio Sara Zapata";
@@ -209,4 +209,43 @@ titulos_card_proyectos.forEach((titulo_card, index) => {
       }
     }, 4000);
   });
+});
+
+(function () {
+  emailjs.init("hdNgzsdJ6JiyUuFsG");
+})();
+
+function enviarCorreo() {
+  const nombre = document.getElementById("nombre").value;
+  const apellido = document.getElementById("apellido").value;
+  const mensaje = document.getElementById("mensaje").value;
+  const gmail = document.getElementById("email").value;
+
+  if (!nombre || !apellido || !mensaje || !gmail) {
+    alert("Por favor complete todos los campos");
+    return;
+  }
+
+  emailjs
+    .send("service_kn8c1pj", "template_85t830m", {
+      from_name: nombre + " " + apellido,
+      message: mensaje,
+      reply_to: gmail,
+    })
+    .then(
+      function () {
+        alert("Mensaje enviado correctamente");
+      },
+      function (error) {
+        console.log("Error: " + JSON.stringify(error));
+        alert("Error al enviar el correo");
+      },
+    );
+}
+
+const textArea = document.getElementById("mensaje");
+
+textArea.addEventListener("click", () => {
+  textArea.style.color = "black";
+  textArea.textContent = "";
 });
