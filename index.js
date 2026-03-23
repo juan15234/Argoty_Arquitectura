@@ -59,8 +59,6 @@ span_proyectos_face.forEach((span, index) => {
       const galeria = galeria_proyectos[index];
       const index_proyecto = parseInt(galeria.dataset.index);
 
-      console.log(index_proyecto);
-
       if (index_proyecto == 1) {
         card_back[index].style.backgroundImage =
           "url('imagenes/servicios_imagenes/obra_nueva/edificio-ingenio/principal-1.jpg";
