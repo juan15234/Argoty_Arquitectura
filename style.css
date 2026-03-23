@@ -34,7 +34,8 @@ h4 {
   font-weight: 500;
 }
 
-a,li {
+a,
+li {
   position: relative;
   text-decoration: none;
   color: white;
@@ -67,10 +68,16 @@ nav {
   border-bottom: 2px solid rgb(207, 162, 15);
 }
 
+.logo_art {
+  object-fit: cover;
+  width: 50px;
+  padding-left: 5px;
+}
+
 .empresa_logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .empresa_logo h1,
@@ -99,14 +106,15 @@ h2 {
 .navegacion {
   position: absolute;
   list-style: none;
-  transition: all 0.3s linear;
   background-color: rgb(46, 46, 46, 0.8);
-  left: 100%;
-  width: 0;
+  width: 100%;
+  height: 0;
   top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   z-index: 2;
+  overflow: hidden;
 }
 
 .navegacion li {
@@ -114,24 +122,23 @@ h2 {
   margin: 20px;
 }
 
-.navegacion li::after{
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    background-color: white;
-    transform: translateX(-50%);
-    left: 50%;
-    transition: width 0.3s ease;
+.navegacion li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: width 0.3s ease;
 }
 
-.navegacion li:hover::after{
-    width: 30%;
+.navegacion li:hover::after {
+  width: 30%;
 }
 
 .navegacion.mostrar {
-  left: 0;
-  width: 100%;
+  height: auto;
 }
 
 .hamburguesa-menu {
@@ -269,7 +276,8 @@ h2 {
   padding: 20px;
 }
 
-.titulos-equipo h1,h2,
+.titulos-equipo h1,
+h2,
 h3,
 h4 {
   background-color: transparent;
@@ -279,14 +287,14 @@ h4 {
   padding: 0;
 }
 
-.titulos-equipo h1{
+.titulos-equipo h1 {
   font-size: 22px;
   font-weight: lighter;
 }
 
 .galeria_equipo {
   display: flex;
-  width: 95%;
+  width: 80%;
   height: 550px;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -304,7 +312,7 @@ h4 {
 }
 
 .galeria_equipo button {
-  position: absolute;
+  position: relative;
   width: 40px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0.625);
@@ -312,19 +320,21 @@ h4 {
   outline: none;
   border: none;
   border-radius: 50%;
-  left: 5px;
-  bottom: 50%;
   margin: 0 20px;
-  z-index: 2;
 }
 
 .galeria_equipo button:hover {
   cursor: pointer;
 }
 
-.galeria_equipo button:last-of-type {
-  left: auto;
-  right: 5px;
+.container_botones_equipo {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  height: 550px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
 }
 
 .galeria_equipo button svg {
@@ -524,7 +534,7 @@ span:hover ~ .span_hover {
 }
 
 /*SECTION CONTACTO*/
-.section-contacto{
+.section-contacto {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -535,21 +545,22 @@ span:hover ~ .span_hover {
   gap: 30px;
 }
 
-.contacto{
+.contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 30px;
   gap: 20px;
 }
 
-.contacto h2{
+.contacto h2 {
   color: white;
   font-size: 35px;
 }
 
-.contacto .info{
+.contacto .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -557,23 +568,23 @@ span:hover ~ .span_hover {
   color: white;
 }
 
-.contacto .info ul{
+.contacto .info ul {
   list-style: none;
   padding: 0;
 }
 
-.contacto .info li{
+.contacto .info li {
   font-size: 15px;
   margin: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
-.contacto .info li strong{
+.contacto .info li strong {
   color: rgb(253, 215, 91);
 }
 
-.contacto .info button{
+.contacto .info button {
   padding: 20px;
   border-radius: 50px;
   outline: none;
@@ -583,17 +594,110 @@ span:hover ~ .span_hover {
   font-size: 20px;
 }
 
-.contacto .info button:hover{
+.contacto .info button:hover {
   cursor: pointer;
   background-color: rgb(253, 215, 91);
   color: white;
 }
 
-.contacto img{
+.contacto img {
   border-radius: 30px;
   border: 1px solid rgb(253, 215, 91);
-  width: 90%;
+  width: 70%;
   height: 500px;
+}
+
+/*-------------------SECCION ENVIAR EMAIL---------------------*/
+.section-enviar-correo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: black;
+  gap: 20px;
+  color: white;
+}
+
+.section-enviar-correo h2 {
+  font-size: 40px;
+  font-family: "Cinzel";
+  font-weight: normal;
+  margin: 10px 0;
+  color: white;
+}
+
+.section-enviar-correo .enviar-correo {
+  position: relative;
+  width: 40vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  border-radius: 30px;
+  border: 1px solid rgb(253, 215, 91);
+  padding: 10px;
+  margin: 20px;
+}
+
+.section-enviar-correo .enviar-correo .nombre-completo {
+  display: flex;
+  gap: 10px;
+  width: 45%;
+  justify-content: center;
+}
+
+.section-enviar-correo .enviar-correo .campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.section-enviar-correo .enviar-correo .campo input {
+  height: 30px;
+  font-size: 20px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-enviar-correo .enviar-correo .campo textarea {
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid gray;
+  font-family: "Montserrat", sans-serif;
+  resize: none;
+  color: gray;
+}
+
+.section-enviar-correo .enviar-correo .campo label {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-enviar-correo .enviar-correo .campo label strong {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+
+.section-enviar-correo .enviar-correo button {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 22px;
+  background-color: white;
+  transition:
+    transform,
+    box-shadow 0.5s ease;
+  margin-bottom: 10px;
+}
+
+.section-enviar-correo .enviar-correo button:hover {
+  transform: translate(5%, -5%);
+  box-shadow: -15px 15px 15px rgb(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
@@ -626,17 +730,56 @@ span:hover ~ .span_hover {
     border: 1px solid rgb(253, 215, 91);
   }
 
-  .contacto{
+  .contacto {
     flex-direction: row;
+    width: 95%;
+    margin: 30px 0;
+  }
+
+  .contacto .info h2 {
+    font-size: 30px;
+  }
+
+  .contacto .info {
+    width: 50%;
+  }
+
+  .contacto .info button {
+    font-size: 16px;
+  }
+
+  .contacto img {
+    width: 52%;
+  }
+
+  .section-enviar-correo h2 {
+    font-size: 6vh;
+  }
+
+  .section-enviar-correo .enviar-correo {
+    width: 50vh;
+  }
+}
+
+@media (min-width: 800px) {
+  .contacto .info h2 {
+    font-size: 50px;
+  }
+
+  .contacto .info {
     width: 80%;
   }
 
-  .contacto h2{
-    font-size: 50px;
+  .contacto .info button {
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1000px) {
+  .logo_art {
+    width: 80px;
+  }
+
   .empresa_logo h1 {
     font-size: 25px;
   }
@@ -649,16 +792,25 @@ span:hover ~ .span_hover {
     font-size: 20px;
   }
 
+  .navegacion li:hover::after {
+    width: 10%;
+  }
+
   .section-principal h2 {
     font-size: 60px;
   }
 
   .galeria_equipo {
+    width: 50%;
     height: 650px;
   }
 
   .galeria_equipo button {
     margin: 0 50px;
+  }
+
+  .container_botones_equipo {
+    width: 50%;
   }
 
   .servicios-argoty {
@@ -681,13 +833,44 @@ span:hover ~ .span_hover {
     border: 1px solid rgb(253, 215, 91);
   }
 
-  .contacto img{
+  .contacto {
+    justify-content: center;
+  }
+
+  .contacto img {
     width: 90%;
     height: 600px;
   }
-  
-  .contacto h2{
-    font-size: 80px;
+
+  .contacto .info h2 {
+    font-size: 55px;
     width: 90%;
+  }
+
+  .contacto img {
+    width: 40%;
+  }
+
+  .contacto .info {
+    width: 50%;
+  }
+
+  .section-enviar-correo h2 {
+    font-size: 60px;
+  }
+
+  .section-enviar-correo .enviar-correo {
+    width: 70vh;
+  }
+
+  .section-enviar-correo .enviar-correo .nombre-completo {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .section-enviar-correo .enviar-correo .campo {
+    width: 80%;
   }
 }
